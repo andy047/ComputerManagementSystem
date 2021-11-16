@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Device</title>
+</head>
+<body>
+
+<form method="POST">
+    <div>Serial: {{device_form.serial}}</div>
+    <div>Type: {{device_form.type}}</div>
+    <div>Brand: {{device_form.brand}}</div>
+    <div>Model: {{device_form.model}}</div>
+    <div>Hard Disk: {{device_form.hard_disk}}</div>
+    <div>CPU: {{device_form.CPU}}</div>
+    <div>Memory: {{device_form.memory}}</div>
+    <button type="submit">ACCEPT</button>
+
+    {% csrf_token %}
+
+</form>
+
+</body>
+</html>

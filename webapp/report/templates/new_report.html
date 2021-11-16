@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Report</title>
+</head>
+<body>
+
+<form method="POST">
+    {{reportForm.is_actived}}
+    <label>Customer: </label>{{reportForm.customer}}
+        <a href="/customer/new_cust_report">
+            <button type="button">New</button>
+        </a>
+
+    <label>Device</label>{{reportForm.device}}
+        <a href="/device/new_dev_report">
+            <button type="button">New Device</button>
+        </a>
+
+    <label>Employee: </label>{{reportForm.employee}}
+    <label>Deposit: </label>{{reportForm.deposit}}
+    <label>Service Cost: </label>{{reportForm.serviceCost}}
+    <label>Total: </label>{{reportForm.total}}
+    <button type="submit">ADD</button>
+    <a href="/"><button type="button">CANCEL</button></a>
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

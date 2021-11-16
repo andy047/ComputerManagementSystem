@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST">
+    <div>Firstname:{{customerForm.first_name}}</div>
+    <div>Lastname:{{customerForm.last_name}}</div>
+    <div>Phone Number:{{customerForm.phoneNumber}}</div>
+    <div>Telephone Number:{{customerForm.telephoneNumber}}</div>
+    <button type="submit">ACCEPT</button>
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

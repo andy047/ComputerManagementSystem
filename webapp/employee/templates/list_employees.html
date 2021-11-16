@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+LISTA DE EMPLEADOS
+
+<a href="{% url 'new_employee' %}"><button>NEW EMPLOYEE</button></a>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Role</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{employee.id}}</td>
+                <td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.username}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.role}}</td>
+                <td>
+                    <a href=" {% url 'edit_employee' employee.id %}">Modify</a>
+                    <a href=" {% url 'delete_employee' employee.id %}" onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>
