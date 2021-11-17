@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/bootstrap.css'%}"/>
     <meta charset="UTF-8">
     <title>New Report</title>
 </head>
 <body>
+<div class="container">
 
-<form method="POST">
-    {{reportForm.is_actived}}
+<form method="POST" class="row g-3">
+    <label>Actived: </label>{{reportForm.is_actived}}
     <label>Customer: </label>{{reportForm.customer}}
         <a href="/customer/new_cust_report">
             <button type="button">New</button>
@@ -27,5 +30,6 @@
     {% csrf_token %}
 </form>
 
+</div>
 </body>
 </html>
